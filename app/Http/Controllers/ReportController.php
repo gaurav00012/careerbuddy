@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\AssessmentAttempt as AssessmentAttempt;
 use App\AssessmentCategory as AssessmentCategory;
 use App\AssessmentDimension as AssessmentDimension;
+use Auth;
 //use PDF;
 use Elibyy\TCPDF\Facades\TCPDF;
 
@@ -16,9 +17,17 @@ class ReportController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+      
+    }
     public function index()
     {
         //
+        $user = Auth::user();
+        $userEmail = $user->email;
+        
         $attemptAssesment = new AssessmentAttempt;
         $AssessmentCategory = new AssessmentCategory;
         $reportHtml = '';
@@ -87,7 +96,7 @@ class ReportController extends Controller
          // print_r ($assmntarray);
          // echo "</pre>";
         
-        $distinctAttempt = $attemptAssesment::where('user_code','aggarwal.gaurav611@gmail.com')
+        $distinctAttempt = $attemptAssesment::where('user_code','$userEmail')
                             ->get();
         
          //PDF

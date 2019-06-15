@@ -57240,12 +57240,12 @@ var careerAssessment = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
 
       if (direction == 'NEXT') {
         /*  if($("#hidQno").val() == $("#hidQuestionCount").val())
-           {
+            {
         $("#hidQno").append("#btn-default");
             //$("#btnSubmit").show();
-             return;
+              return;
             
-           }*/
+            }*/
         $("#hidQuestionCode").val($("#" + question_code).next().attr('id')); //$("#"+question_code).delay("slow").fadeOut();
         //$("#"+question_code).next().delay("fast").fadeIn();
 
@@ -57360,7 +57360,7 @@ var careerAssessment = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\career_buddy\resources\js\careerassessment */"./resources/js/careerassessment.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\careerbuddy\resources\js\careerassessment */"./resources/js/careerassessment.js");
 
 
 /***/ })

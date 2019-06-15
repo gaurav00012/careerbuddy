@@ -13,5 +13,6 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
 	.js('resources/js/careerassessment','public/js')
-	.js('/resources/js/careerassessment')
+	//.js('/resources/js/careerassessment', 'public/css')
    .sass('resources/sass/app.scss', 'public/css');
+mix.js("resources/js/components/userprofile/user_profile.js", "public/js");
